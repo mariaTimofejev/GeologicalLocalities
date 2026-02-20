@@ -7,7 +7,7 @@ const search = ref("")
 
 const filteredLocalities = computed(() => {
   if (!search.value) return localities.value
-
+  
   return localities.value.filter(loc =>
     (loc.name || loc.name_en || "")
       .toLowerCase()
