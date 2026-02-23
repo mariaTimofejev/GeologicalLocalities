@@ -1,11 +1,11 @@
 export interface Country {
-  name: string;
+  readonly name: string;
 }
 
 export interface Locality {
-  id: number;
-  name: string;
-  latitude: number;
-  longitude: number;
-  country?: Country;
+  readonly id: number;
+  readonly name: string;
+  readonly latitude: number;
+  readonly longitude: number;
+  readonly country?: Country;
 }
