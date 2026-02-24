@@ -14,7 +14,7 @@ export function useLocalities() {
   const next = ref(null);
   const previous = ref(null);
 
- // used to cancel previous API request when user types fast
+// used to cancel previous API request when user types fast
   let controller;
 
   async function load() {
@@ -36,6 +36,7 @@ export function useLocalities() {
       previous.value = data.previous;
 
     } catch (e) {
+        
 // ignore abort errors (user typed again)
       if (e.name !== "AbortError") {
         error.value = "Failed to load localities";
