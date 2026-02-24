@@ -1,4 +1,3 @@
-// src/services/LocalityService.ts
 import type { Locality } from "@/types/locality";
 
 const BASE_URL = "https://rwapi.geoloogia.info/api/v1/public/localities/";
