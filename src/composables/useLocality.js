@@ -1,5 +1,5 @@
 import { ref, watch } from "vue";
-import { fetchLocalities } from "@/services/localityService";
+import { fetchLocalities, fetchLocality } from "@/services/localityService";
 
 export function useLocality(id) {
 
@@ -14,8 +14,8 @@ export function useLocality(id) {
       loading.value = true;
       error.value = null;
 
-// expand=country avoids extra request (backend relation preload)
-      const data = await fetchLocalities(`${id.value}/?expand=country`);
+// use dedicated helper that returns a single object
+      const data = await fetchLocality(id.value, /* signal? not needed here */);
       locality.value = data;
 
     } catch {
