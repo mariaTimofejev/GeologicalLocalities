@@ -18,7 +18,7 @@ const router = createRouter({
       name: "locality-detail",
 
 // Dynamic import enables code splitting per page
-      component: () => import("@/views/LocalityDetail.vue"),
+      component: () => import("@/views/LocalityMap.vue"),
 
 // Pass route params as component props (better testability & decoupling)
       props: true
